@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameZone - Gaming Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Effects -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+    <div class="app">
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="main-header">
+
+            <div class="logo">
+                <div class="logo-icon">🎮</div>
+
+                <div>
+                    <h1>GAME<span>ZONE</span></h1>
+                    <p>Gaming Registration Portal</p>
+                </div>
+            </div>
+
+            <div class="header-badge">
+                ⚡ PLAY • COMPETE • WIN
+            </div>
+
+        </header>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-tag">
+                    🔥 GAMER REGISTRATION OPEN
+                </div>
+
+                <h2>
+                    ENTER THE
+                    <span>GAME ZONE</span>
+                </h2>
+
+                <p>
+                    Register your gaming profile and join the
+                    ultimate gaming community.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GAME SELECT ================= -->
+
+        <section class="games-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="small-title">SELECT YOUR GAME</p>
+
+                    <h2>Choose Your Battle</h2>
+                </div>
+
+            </div>
+
+
+            <div class="game-grid">
+
+
+                <!-- FREE FIRE -->
+
+                <div
+                    class="game-card"
+                    data-game="Free Fire MAX"
+                    onclick="selectGame('Free Fire MAX')"
+                >
+
+                    <div class="game-logo freefire">
+                        🔥
+                    </div>
+
+                    <div class="game-info">
+
+                        <h3>Free Fire MAX</h3>
+
+                        <p>Battle Royale</p>
+
+                    </div>
+
+                    <div class="game-arrow">
+                        →
+                    </div>
+
+                </div>
+
+
+                <!-- BGMI -->
+
+                <div
+                    class="game-card"
+                    data-game="BGMI"
+                    onclick="selectGame('BGMI')"
+                >
+
+                    <div class="game-logo bgmi">
+                        🎯
+                    </div>
+
+                    <div class="game-info">
+
+                        <h3>BGMI</h3>
+
+                        <p>Battle Royale</p>
+
+                    </div>
+
+                    <div class="game-arrow">
+                        →
+                    </div>
+
+                </div>
+
+
+                <!-- VALORANT -->
+
+                <div
+                    class="game-card"
+                    data-game="Valorant"
+                    onclick="selectGame('Valorant')"
+                >
+
+                    <div class="game-logo valorant">
+                        V
+                    </div>
+
+                    <div class="game-info">
+
+                        <h3>Valorant</h3>
+
+                        <p>Tactical Shooter</p>
+
+                    </div>
+
+                    <div class="game-arrow">
+                        →
+                    </div>
+
+                </div>
+
+
+                <!-- COD -->
+
+                <div
+                    class="game-card"
+                    data-game="Call of Duty Mobile"
+                    onclick="selectGame('Call of Duty Mobile')"
+                >
+
+                    <div class="game-logo cod">
+                        ☠
+                    </div>
+
+                    <div class="game-info">
+
+                        <h3>Call of Duty</h3>
+
+                        <p>FPS Action</p>
+
+                    </div>
+
+                    <div class="game-arrow">
+                        →
+                    </div>
+
+                </div>
+
+
+                <!-- FORTNITE -->
+
+                <div
+                    class="game-card"
+                    data-game="Fortnite"
+                    onclick="selectGame('Fortnite')"
+                >
+
+                    <div class="game-logo fortnite">
+                        ⚡
+                    </div>
+
+                    <div class="game-info">
+
+                        <h3>Fortnite</h3>
+
+                        <p>Battle Royale</p>
+
+                    </div>
+
+                    <div class="game-arrow">
+                        →
+                    </div>
+
+                </div>
+
+
+                <!-- MINECRAFT -->
+
+                <div
+                    class="game-card"
+                    data-game="Minecraft"
+                    onclick="selectGame('Minecraft')"
+                >
+
+                    <div class="game-logo minecraft">
+                        ⛏
+                    </div>
+
+                    <div class="game-info">
+
+                        <h3>Minecraft</h3>
+
+                        <p>Sandbox</p>
+
+                    </div>
+
+                    <div class="game-arrow">
+                        →
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= REGISTRATION ================= -->
+
+        <section class="form-section">
+
+            <div class="form-heading">
+
+                <div class="form-icon">
+                    👤
+                </div>
+
+                <div>
+
+                    <p class="small-title">
+                        PLAYER DETAILS
+                    </p>
+
+                    <h2>Register Your Profile</h2>
+
+                </div>
+
+            </div>
+
+
+            <form id="registrationForm">
+
+
+                <!-- BASIC INFORMATION -->
+
+                <div class="form-title">
+                    <span>01</span>
+                    Personal Information
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Gamer Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="gamerName"
+                            placeholder="Enter your gamer name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="gamer@example.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Age
+                        </label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            placeholder="Enter age"
+                            min="10"
+                            max="60"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter phone number"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GAMING INFORMATION -->
+
+                <div class="form-title">
+
+                    <span>02</span>
+
+                    Gaming Information
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Select Game
+                        </label>
+
+                        <select
+                            id="game"
+                            required
+                        >
+
+                            <option value="">
+                                Select your game
+                            </option>
+
+                            <option>
+                                Free Fire MAX
+                            </option>
+
+                            <option>
+                                BGMI
+                            </option>
+
+                            <option>
+                                Valorant
+                            </option>
+
+                            <option>
+                                Call of Duty Mobile
+                            </option>
+
+                            <option>
+                                Fortnite
+                            </option>
+
+                            <option>
+                                Minecraft
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Game ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="gameId"
+                            placeholder="Enter your game ID"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Current Rank
+                        </label>
+
+                        <select
+                            id="rank"
+                            required
+                        >
+
+                            <option value="">
+                                Select your rank
+                            </option>
+
+                            <option>Bronze</option>
+                            <option>Silver</option>
+                            <option>Gold</option>
+                            <option>Platinum</option>
+                            <option>Diamond</option>
+                            <option>Master</option>
+                            <option>Grandmaster</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Gaming Platform
+                        </label>
+
+                        <select
+                            id="platform"
+                            required
+                        >
+
+                            <option value="">
+                                Select platform
+                            </option>
+
+                            <option>Mobile</option>
+                            <option>PC</option>
+                            <option>Console</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GAME MODE -->
+
+                <div class="input-group">
+
+                    <label>
+                        Preferred Game Mode
+                    </label>
+
+
+                    <div class="mode-grid">
+
+
+                        <label class="mode-option">
+
+                            <input
+                                type="radio"
+                                name="mode"
+                                value="Solo"
+                                required
+                            >
+
+                            <div class="mode-content">
+
+                                <span class="mode-icon">
+                                    👤
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Solo
+                                    </strong>
+
+                                    <small>
+                                        Play alone
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </label>
+
+
+
+                        <label class="mode-option">
+
+                            <input
+                                type="radio"
+                                name="mode"
+                                value="Duo"
+                            >
+
+                            <div class="mode-content">
+
+                                <span class="mode-icon">
+                                    👥
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Duo
+                                    </strong>
+
+                                    <small>
+                                        Two players
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </label>
+
+
+
+                        <label class="mode-option">
+
+                            <input
+                                type="radio"
+                                name="mode"
+                                value="Squad"
+                            >
+
+                            <div class="mode-content">
+
+                                <span class="mode-icon">
+                                    👨‍👩‍👧‍👦
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Squad
+                                    </strong>
+
+                                    <small>
+                                        Team battle
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </label>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="register-btn"
+                >
+
+                    <span>
+                        🚀
+                    </span>
+
+                    Register Player
+
+                </button>
+
+
+            </form>
+
+        </section>
+
+
+
+        <!-- ================= REGISTERED PLAYERS ================= -->
+
+        <section class="players-section">
+
+
+            <div class="players-heading">
+
+                <div>
+
+                    <p class="small-title">
+                        COMMUNITY
+                    </p>
+
+                    <h2>Registered Players</h2>
+
+                    <p
+                        id="playerCount"
+                        class="player-count"
+                    >
+                        0 players registered
+                    </p>
+
+                </div>
+
+
+                <div class="online-badge">
+
+                    <span></span>
+
+                    ONLINE
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PLAYER CARDS -->
+
+            <div id="playerContainer"></div>
+
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                id="emptyState"
+                class="empty-state"
+            >
+
+                <div class="empty-game-icon">
+                    🎮
+                </div>
+
+                <h2>
+                    No Players Yet
+                </h2>
+
+                <p>
+                    Be the first gamer to register
+                    and join the community.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <div class="footer-logo">
+                🎮 GAMEZONE
+            </div>
+
+            <p>
+                © 2026 GameZone Gaming Portal
+            </p>
+
+            <p>
+                Play Fair • Play Hard • Have Fun
+            </p>
+
+        </footer>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
