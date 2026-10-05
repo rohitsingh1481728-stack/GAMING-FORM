@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0f19;
+    color: white;
+    min-height: 100vh;
+}
+
+.app {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #9ca3af;
+}
+
+/* Form */
+
+.form-section,
+.players-section {
+    background: #111827;
+    border: 1px solid #273244;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.form-section h2,
+.players-section h2 {
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #d1d5db;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #374151;
+    border-radius: 9px;
+    background: #0b0f19;
+    color: white;
+    outline: none;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus {
+    border-color: #7c3aed;
+}
+
+select option {
+    background: #111827;
+}
+
+/* Radio */
+
+.radio-group {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}
+
+.radio-group input {
+    width: auto;
+}
+
+/* Button */
+
+.register-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #7c3aed;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.register-btn:hover {
+    background: #6d28d9;
+}
+
+/* Section */
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title p {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* Player Cards */
+
+#playerContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.player-card {
+    background: #0b0f19;
+    border: 1px solid #273244;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.player-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.player-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.status {
+    background: #064e3b;
+    color: #6ee7b7;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.player-info {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    color: #d1d5db;
+    font-size: 14px;
+}
+
+.player-info span {
+    color: #9ca3af;
+}
+
+.player-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.player-actions button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+}
+
+.edit-btn {
+    background: #2563eb;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+/* Empty */
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #9ca3af;
+}
+
+.empty-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.empty-state h2 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    #playerContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .app {
+        padding: 20px 12px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #playerContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section,
+    .players-section {
+        padding: 18px;
+    }
+}
